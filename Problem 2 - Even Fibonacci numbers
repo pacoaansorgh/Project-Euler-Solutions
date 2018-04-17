@@ -9,9 +9,9 @@ int main(){
 	int fib = 1;
 	int prev = 1;
 	while (fib < LIMIT) {
-	    // Check if the number is even.
+	    	// Check if the number is even.
 		if (fib % 2 == 0) {
-		    // If so, add it to the sum.
+		    	// If so, add it to the sum.
 			sum += fib;
 		}
 		// Compute the next fibonacci number.
