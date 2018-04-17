@@ -1,12 +1,13 @@
 // Find the largest prime factor of 600851475143
 #include <iostream>
+#define TARGET 600851475143
 
 using namespace std;
 
 int main() {
     long long largest = 0;
-    // Our target number. Since we modify this number I decided not to use a define.
-    long long target = 600851475143;
+    // Our target number. Since we modify this number We have to create a variable for it.
+    long long target = TARGET;
     for (int i = 1; i <= target; i++) {
         // Check if our target number is divisible by our current number.
         if (target % i == 0){
@@ -19,6 +20,6 @@ int main() {
             i = 1;
         }
     }
-    cout<<largest;
+    cout<<"The largest prime factor of "<<TARGET<<" is: "<<largest;
     return 0;
 }
