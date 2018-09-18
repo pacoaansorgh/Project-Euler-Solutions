@@ -16,13 +16,13 @@ long long Lattice(int height, int width){
         return 1;
     }
     // Otherwise, if we already have a stored value for this width/height combination, return that.
-    else if (results[height-1][width-1] != 0){
-        return results[height-1][width-1];
+    else if (results[height][width] != 0){
+        return results[height][width];
     }
     // Otherwise we compute the value for this width/height combination, store it, then return it.
     else{
         long long r_val = Lattice(height -1, width) + Lattice(height, width - 1);
-        results[height-1][width-1] = r_val;
+        results[height][width] = r_val;
         return r_val;
     }
 }
